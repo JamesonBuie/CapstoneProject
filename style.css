@@ -1,5 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
-* {
-    font-family: 'Oleo Script', cursive;
+*{
+    background-color: #48a4d6;
+}
+#title h1 {
+    font-size: 60px;
+    /* font-family: 'Koulen', cursive; */
+    font-family: 'Luckiest Guy', cursive;
+    color: #c80000;
+    -webkit-text-stroke-color: #FFEb00;
+    -webkit-text-stroke-width: .00005px;
+    text-align: center;
+    
 }
