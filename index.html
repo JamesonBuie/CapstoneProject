@@ -13,23 +13,33 @@
 </head>
 
 <body>
+    <img id="textBubble" src="pixel-speech-bubble.gif" alt="">
     <section id="title">
+   
         <h1>What's For Lunch In Glasgow, KY?</h1>
     </section>
     <!-- Food button section -->
-    <section>
-        <h1>I'm craving...</h1>
+    <section >
+        <h1 id="craving">I'm craving...</h1>
         <div id="foodButtons">
-            <button>Burgers</button>
-            <button>Pizza</button>
-            <button>Asian Cuisine</button>
-            <button>BBQ</button>
-            <button>Fried Chicken/Catfish</button>
-            <button>Anything</button>
+            <button id="burgers">Burgers</button>
+            <button id="asian">Asian Cuisine</button>
+            <button id="bbq">BBQ</button>
+            <button id="fried">Fried Chicken/Catfish</button>
+            <button id="breakfast">Breakfast</button>
+            <button id="sandwich">Sandwiches</button>
+            <button id="anything">Just About Anything</button>
+            <button id="random">Give me a random restaurant</button>
         </div>
 
         <!-- Restaurant List -->
-        <img src="handsomeChef (1).png" alt="Handsome Chef">
+        <div id="chefDescript">
+            <h1>Handsome Chef Can Help!</h1>
+            <p>If you want to support locally owned restaurants in the great 42141, then you came to the right place! Whether your girlfriend can't decide where she wants to go or you are tired of eating Wendy's and Taco Bell, Handsome Chef can help. Just click the type of food you are craving and a restaurant that specializes in it will be displayed, or have Handsome Chef randomly select a place for you. Give it a try!</p>
+        </div>
+        <img id="chef" src="handsomeChef (1).png" alt="Handsome Chef">
+        <!-- <img style="z-index: 2;" src="pixel-speech-bubble.gif" alt=""> -->
+
         <div class="restaurantList">
 
         </div>
