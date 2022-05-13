@@ -55,13 +55,22 @@ const websiteLinks = {
 
 // Selecting elements in HTML file
 const restaurant = document.querySelector(`.restaurantList`)
+const body = document.querySelector(`body`)
 // Functions
+// Function to tell user to scroll down
+function scrollDown(){
+        const seeMoreDiv = document.createElement(`div`)
+        seeMoreDiv.innerHTML = `<div id="seeMore">See More <i id="arrow" class="fa-solid fa-arrow-down-long"></i></div>`
+        body.append(seeMoreDiv)
+}
 // Function to remove chef
 const chef = document.querySelector(`#chef`)
 function removeChef() {
     chef.remove()
     console.log(`Removed Chef`)
 }
+
+  
 // Function to remove description
 const description = document.querySelector(`#chefDescript`)
 function removeDescription() {
@@ -124,6 +133,7 @@ asianButton.onclick = () => {
     removeBubble()
     displayRecTitle()
     removeOptions()
+    scrollDown()
     for (i = 0; i < foodSpecial.asian.length; i++) {
         const restaurantTitle = document.createElement(`h2`)
         restaurant.append(restaurantTitle)
@@ -160,6 +170,7 @@ friedButton.onclick = () => {
     removeBubble()
     displayRecTitle()
     removeOptions()
+    scrollDown()
     for (i = 0; i < foodSpecial.fried.length; i++) {
         const restaurantTitle = document.createElement(`h2`)
         restaurant.append(restaurantTitle)
@@ -178,6 +189,7 @@ breakfastButton.onclick = () => {
     removeBubble()
     displayRecTitle()
     removeOptions()
+    scrollDown()
     for (i = 0; i < foodSpecial.breakfast.length; i++) {
         const restaurantTitle = document.createElement(`h2`)
         restaurant.append(restaurantTitle)
