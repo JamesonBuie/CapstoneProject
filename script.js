@@ -133,7 +133,7 @@ asianButton.onclick = () => {
     removeBubble()
     displayRecTitle()
     removeOptions()
-    scrollDown()
+    // scrollDown()
     for (i = 0; i < foodSpecial.asian.length; i++) {
         const restaurantTitle = document.createElement(`h2`)
         restaurant.append(restaurantTitle)
