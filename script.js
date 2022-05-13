@@ -27,7 +27,7 @@ const foodSpecial = {
     bbq: [titles.ribLickers, titles.bigMan, titles.bbqHut,],
     fried: [titles.galeNDales, titles.mjkFeedMeal, titles.ritterHouse, titles.cowboys, titles.bullys, titles.littleTaste],
     sandwiches: [titles.yanceys, titles.fineArtsBistro, titles.ritterHouse, titles.ajs, titles.smokinEats],
-    anything: [titles.yanceys, titles.fineArtsBistro, titles.familyStyle, titles.kanhaKafe, titles.newCentury, titles.littleTaste],
+    anything: [titles.yanceys, titles.familyStyle, titles.kanhaKafe, titles.newCentury, titles.littleTaste],
     breakfast: [titles.galeNDales, titles.georgeJs, titles.fineArtsBistro, titles.georgeJs, titles.ritterHouse, titles.cowboys, titles.bestDonuts, titles.sweetheartBakery]
 }
 // Website links for all the restaurants
@@ -53,6 +53,8 @@ const websiteLinks = {
     littleTaste: `https://www.facebook.com/A-Little-Taste-of-Texas-442586605783554/`
 }
 
+// Selecting elements in HTML file
+const restaurant = document.querySelector(`.restaurantList`)
 // Functions
 // Function to remove chef
 const chef = document.querySelector(`#chef`)
@@ -68,25 +70,50 @@ function removeDescription() {
 }
 // Function to remove chef text bubble 
 const bubble = document.querySelector(`#textBubble`)
-function removeBubble(){
+function removeBubble() {
     bubble.remove()
 }
-// Function to Create Restaurant Responses
-const restaurant = document.querySelector(`.restaurantList`)
-function createRestaurant() {
-    const restaurantTitle = document.createElement(`h2`)
-    restaurant.append(restaurantTitle)
-    restaurantTitle.innerText = titles.kanhaKafe
-    console.log(`Create restaurant worked`);
+// Function to say what handsome chef requests
+function displayRecTitle() {
+    // const chefRequest = document.createElement(`h1`)
+    const chefRequest = document.createElement(`div`)
+    restaurant.append(chefRequest)
+    // chefRequest.innerText = `Here is what Handsome Chef Requests`.toUpperCase()
+    chefRequest.innerHTML = `<h1>Here is what Handsome Chef Recommends   <button onclick="refreshPage()" id="refreshButton">Refresh List</button></h1>`
+    chefRequest.classList.add(`chefRequest`)
 }
-// Burger Button Functions
+
+// Function to refresh page when button is clicked
+function refreshPage() {
+    window.location.reload();
+}
+
+// Function to remove food buttons
+const foodButtons = document.querySelector(`#foodButtons`)
+function removeOptions() {
+    foodButtons.remove()
+}
+
+
+
+// Burger Button Function
 const burgerButton = document.querySelector(`#foodButtons>#burgers`)
 
 burgerButton.onclick = () => {
     removeChef()
     removeDescription()
-    createRestaurant()
+    // createRestaurant()
     removeBubble()
+    displayRecTitle()
+    removeOptions()
+    for (i = 0; i < foodSpecial.burger.length; i++) {
+        const restaurantTitle = document.createElement(`h2`)
+        restaurant.append(restaurantTitle)
+        // restaurantTitle.innerText = foodSpecial.burger[i]
+        restaurantTitle.innerHTML = `
+        <h2 class ="eateryName">${foodSpecial.burger[i]}</h2>
+        <button class="infoButton">See More Info</button>`
+    }
 }
 // Asian button functions
 const asianButton = document.querySelector(`#asian`)
@@ -94,8 +121,16 @@ const asianButton = document.querySelector(`#asian`)
 asianButton.onclick = () => {
     removeChef()
     removeDescription()
-    createRestaurant()
     removeBubble()
+    displayRecTitle()
+    removeOptions()
+    for (i = 0; i < foodSpecial.asian.length; i++) {
+        const restaurantTitle = document.createElement(`h2`)
+        restaurant.append(restaurantTitle)
+        restaurantTitle.innerHTML = `
+        <h2 class ="eateryName">${foodSpecial.asian[i]}</h2>
+        <button class="infoButton">See More Info</button>`
+    }
 }
 // BBQ button functions
 const bbqButton = document.querySelector(`#bbq`)
@@ -103,8 +138,17 @@ const bbqButton = document.querySelector(`#bbq`)
 bbqButton.onclick = () => {
     removeChef()
     removeDescription()
-    createRestaurant()
     removeBubble()
+    displayRecTitle(
+        removeOptions()
+    )
+    for (i = 0; i < foodSpecial.bbq.length; i++) {
+        const restaurantTitle = document.createElement(`h2`)
+        restaurant.append(restaurantTitle)
+        restaurantTitle.innerHTML = `
+        <h2 class ="eateryName">${foodSpecial.bbq[i]}</h2>
+        <button class="infoButton">See More Info</button>`
+    }
 }
 
 // Fried food button functions
@@ -113,8 +157,16 @@ const friedButton = document.querySelector(`#fried`)
 friedButton.onclick = () => {
     removeChef()
     removeDescription()
-    createRestaurant()
     removeBubble()
+    displayRecTitle()
+    removeOptions()
+    for (i = 0; i < foodSpecial.fried.length; i++) {
+        const restaurantTitle = document.createElement(`h2`)
+        restaurant.append(restaurantTitle)
+        restaurantTitle.innerHTML = `
+        <h2 class ="eateryName">${foodSpecial.fried[i]}</h2>
+        <button class="infoButton">See More Info</button>`
+    }
 }
 
 // Breakfast button functions
@@ -123,16 +175,32 @@ const breakfastButton = document.querySelector(`#breakfast`)
 breakfastButton.onclick = () => {
     removeChef()
     removeDescription()
-    createRestaurant()
     removeBubble()
+    displayRecTitle()
+    removeOptions()
+    for (i = 0; i < foodSpecial.breakfast.length; i++) {
+        const restaurantTitle = document.createElement(`h2`)
+        restaurant.append(restaurantTitle)
+        restaurantTitle.innerHTML = `
+        <h2 class ="eateryName">${foodSpecial.breakfast[i]}</h2>
+        <button class="infoButton">See More Info</button>`
+    }
 }
 // Sandwich button functions
 const sandwichButton = document.querySelector(`#sandwich`)
 sandwichButton.onclick = () => {
     removeChef()
     removeDescription()
-    createRestaurant()
     removeBubble()
+    displayRecTitle()
+    removeOptions()
+    for (i = 0; i < foodSpecial.sandwiches.length; i++) {
+        const restaurantTitle = document.createElement(`h2`)
+        restaurant.append(restaurantTitle)
+        restaurantTitle.innerHTML = `
+        <h2 class ="eateryName">${foodSpecial.sandwiches[i]}</h2>
+        <button class="infoButton">See More Info</button>`
+    }
 }
 // Anything button functions
 const anythingButton = document.querySelector(`#anything`)
@@ -140,10 +208,43 @@ const anythingButton = document.querySelector(`#anything`)
 anythingButton.onclick = () => {
     removeChef()
     removeDescription()
-    createRestaurant()
     removeBubble()
+    displayRecTitle()
+    removeOptions()
+    for (i = 0; i < foodSpecial.anything.length; i++) {
+        const restaurantTitle = document.createElement(`h2`)
+        restaurant.append(restaurantTitle)
+        restaurantTitle.innerHTML = `
+        <h2 class ="eateryName">${foodSpecial.anything[i]}</h2>
+        <button class="infoButton">See More Info</button>`
+    }
 }
 
+// Random Button Functions
+const randomButton = document.querySelector(`#random`)
+// function showRandom(){
+// const keys = Object.keys(titles)
+// const prop = keys[Math.floor(Math.random() * keys.length)]
+// console.log(prop); 
+// }
+
+randomButton.onclick = () => {
+    displayRecTitle()
+    removeBubble()
+    removeChef()
+    removeDescription()
+    removeOptions()
+    // showRandom()
+    const single = document.createElement(`h1`)
+    restaurant.append(single)
+    const keys = Object.keys(titles)
+    const prop = keys[Math.floor(Math.random() * keys.length)]
+    console.log(prop);
+    // single.innerText = `${prop}`
+
+    single.classList.add(`randomPlace`)
+
+}
 // Basic object template
 const objectName = {
     ribLickers: ``,

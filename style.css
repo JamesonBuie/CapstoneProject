@@ -102,3 +102,44 @@ font-size: 60px;
     box-shadow: inset 0 0 10px #FFEb00;
     line-height: 20px;
 }
+
+/* Restaurants that are displayed when button is clicked */
+.chefRequest h1{
+    font-family: 'Luckiest Guy', cursive;
+    color: #c80000;
+    -webkit-text-stroke-color: #FFEb00;
+    -webkit-text-stroke-width: .00005px;
+    text-align: center;
+}
+#refreshButton {
+    position: relative;
+   bottom: 3px;
+   border: 2px solid #c80000;
+   border-radius: 12px;
+   color: #c80000;
+   
+}
+.restaurantList {
+   position: relative;
+    top: 5px;
+}
+.infoButton {
+    position: relative;
+    left: 400px;
+    bottom: 90px;
+    border: 2px solid #c80000;
+   border-radius: 12px;
+   color: #c80000;
+}
+
+.eateryName {
+    color: #c80000;
+    font-size: 40px;
+text-align: center;
+}
+
+.randomPlace {
+    color: #c80000;
+    font-size: 40px;
+text-align: center;
+}
