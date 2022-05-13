@@ -222,12 +222,6 @@ anythingButton.onclick = () => {
 
 // Random Button Functions
 const randomButton = document.querySelector(`#random`)
-// function showRandom(){
-// const keys = Object.keys(titles)
-// const prop = keys[Math.floor(Math.random() * keys.length)]
-// console.log(prop); 
-// }
-
 randomButton.onclick = () => {
     displayRecTitle()
     removeBubble()
@@ -237,13 +231,18 @@ randomButton.onclick = () => {
     // showRandom()
     const single = document.createElement(`h1`)
     restaurant.append(single)
-    const keys = Object.keys(titles)
-    const prop = keys[Math.floor(Math.random() * keys.length)]
-    console.log(prop);
-    // single.innerText = `${prop}`
 
+    // Function to display random restaurant when button is clicked
+    function showRandom() {
+        // const keys = Object.keys(titles)
+        const keys = Object.keys(titles)
+        const prop = keys[Math.floor(Math.random() * keys.length)]
+        console.log(prop);
+        single.innerText = titles[`${prop}`]
+    }
+    showRandom()
+    // 
     single.classList.add(`randomPlace`)
-
 }
 // Basic object template
 const objectName = {
