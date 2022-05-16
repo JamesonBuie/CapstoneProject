@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 .listItem {
     color: blue;
 }
+
 * {
     background-color: #48a4d6;
     font-family: 'Koulen', cursive;
 }
 
 #title h1 {
-   text-align: center;
-font-size: 60px;
+    text-align: center;
+    font-size: 60px;
     /* font-family: 'Koulen', cursive; */
     font-family: 'Luckiest Guy', cursive;
     color: #c80000;
@@ -18,13 +20,15 @@ font-size: 60px;
     -webkit-text-stroke-width: .00005px;
 
 }
+
 #leftLogo {
-  z-index: 3;
-  display: inline;
-  position: absolute;
-  left: 70px;
-  top: 20px;
+    z-index: 3;
+    display: inline;
+    position: absolute;
+    left: 70px;
+    top: 20px;
 }
+
 #rightLogo {
     z-index: 3;
     display: inline;
@@ -32,6 +36,7 @@ font-size: 60px;
     right: 70px;
     top: 20px;
 }
+
 /* Handsome Chef Word Box */
 #chefDescript {
     box-sizing: border-box;
@@ -44,6 +49,7 @@ font-size: 60px;
     padding: 20px;
     z-index: 1;
 }
+
 #textBubble {
     width: 240px;
     height: 80px;
@@ -86,12 +92,14 @@ font-size: 60px;
     top: 380px;
     font-size: 28px;
 }
+
 #arrow {
     position: absolute;
     right: 5px;
     top: 60px;
     font-size: 200px;
 }
+
 #craving {
     color: #c80000;
     position: absolute;
@@ -103,7 +111,7 @@ font-size: 60px;
 
 
 #foodButtons {
-    height: 500px;
+    height: 540px;
     color: #c80000;
     display: flex;
     flex-direction: column;
@@ -113,7 +121,7 @@ font-size: 60px;
     top: 220px;
 }
 
-  #foodButtons button:hover {
+#foodButtons button:hover {
     color: #FFEb00;
 }
 
@@ -131,35 +139,40 @@ font-size: 60px;
 }
 
 /* Restaurants that are displayed when button is clicked */
-.chefRequest h1{
+.chefRequest h1 {
     font-family: 'Luckiest Guy', cursive;
     color: #c80000;
     -webkit-text-stroke-color: #FFEb00;
     -webkit-text-stroke-width: .00005px;
     text-align: center;
 }
+
 #refreshButton {
     position: relative;
-   bottom: 3px;
-   border: 2px solid #c80000;
-   border-radius: 12px;
-   color: #c80000; 
+    bottom: 3px;
+    border: 2px solid #c80000;
+    border-radius: 12px;
+    color: #c80000;
 }
+
 #refreshButton:hover {
-    color:  #FFEb00;
+    color: #FFEb00;
 }
+
 .restaurantList {
-   position: relative;
+    position: relative;
     top: 5px;
 }
+
 .infoButton {
     position: relative;
     left: 400px;
     bottom: 60px;
     border: 2px solid #c80000;
-   border-radius: 12px;
-   color: #c80000;
+    border-radius: 12px;
+    color: #c80000;
 }
+
 .infoButton:hover {
     color: #FFEb00
 }
@@ -168,7 +181,7 @@ font-size: 60px;
 .eateryName {
     color: #c80000;
     font-size: 40px;
-text-align: center;
+    text-align: center;
     /* border: 3px solid black; */
     margin: 0;
 }
@@ -176,5 +189,22 @@ text-align: center;
 .randomPlace {
     color: #c80000;
     font-size: 40px;
-text-align: center;
+    text-align: center;
+}
+
+/* New Chef */
+#chef2 {
+    position: absolute;
+    right: 440px;
+    bottom: -60px;
+    z-index: 1;
+}
+
+#textBubble2 {
+    z-index: 2;
+    position: absolute;
+    right: 392px;
+    top: 300px;
+    width: 280px;
+    height: 80px;
 }
